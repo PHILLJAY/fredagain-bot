@@ -31,11 +31,11 @@ async def on_message(message):
         return
 
     if 'fred' in message.content.lower():  
-        await message.channel.send(fredOutput())
+        await message.channel.send('hey its me fred')
         return
     
     if client.application_id in map(lambda x: x.id, message.mentions):
-        await message.chanel.send('what do you want')
+        await message.channel.send(fredOutput())
 
     if random.random() < 0.02:
         embed = discord.Embed()
