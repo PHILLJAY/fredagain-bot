@@ -31,7 +31,7 @@ async def on_message(message):
         return
 
     if 'fred' in message.content.lower():  
-        await message.channel.send('hey its me fred again')
+        await message.channel.send(fredOutput())
         return
     
     if client.application_id in map(lambda x: x.id, message.mentions):
